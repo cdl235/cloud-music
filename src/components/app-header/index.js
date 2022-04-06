@@ -212,8 +212,9 @@ export default memo(function JMAppHeader (props) {
       <div className="content w1100">
         <HeaderLeft>
           <h1>
-            <a href="#/" className="logo sprite_01">
-              云音乐
+            <a href="#/" className="logo">
+              <img src={require('../../assets/img/login.png')} alt='' />
+              网抑云音乐
             </a>
           </h1>
           <div className="header-group">

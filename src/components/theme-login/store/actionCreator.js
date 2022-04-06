@@ -43,7 +43,7 @@ export const getLoginProfileInfo = (username, password, tip) => {
     gotoPhoneLogin(username, undefined, md5(password)).then((res) => {
       // console.log(res)
       if (res.code !== 200) {
-        message.error('账号或密码错误')
+        message.error('请检查登录状态')
       } else {
         tip && message.success('登录成功')
         // console.log(res)

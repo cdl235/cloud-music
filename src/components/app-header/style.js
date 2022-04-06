@@ -22,11 +22,20 @@ export const HeaderLeft = styled.div`
   display: flex;
 
   .logo {
-    display: inline-block;
-    width: 176px;
+    display: flex;
+    align-items:center ;
     height: 69px;
     background-position: 0 0;
-    text-indent: -9999px;
+    // text-indent: -9999px;
+    margin-right:40px;
+    color:#fff;
+    font-size:20px
+  }
+  img {
+    width: 69px;
+    height: 69px;
+    border-radius:15px;
+    margin-right:10px;
   }
 
   .header-group {

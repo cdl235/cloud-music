@@ -8,7 +8,7 @@ import { getUserSongList } from '../../service/user';
 import { MainDetail } from '../song-detail/child-pages/song-detail-left/style';
 import ThemeHeaderRcm from '@/components/theme-header-rcm'
 import ThemePlayist from '@/components/theme-playlist'
-import { getSongDetails, getSongList, getSongListDetail } from '../../service/songs';
+import { getSongDetails, getSongListDetail } from '../../service/songs';
 import { HeaderTitle } from '../song-detail/child-pages/song-detail-left/style';
 
 
@@ -22,7 +22,6 @@ export default memo(function JMMine () {
   const [hoarding, setHoarding] = useState([])
   const [songListDetail, setSongListDetail] = useState([])
   const [songHead, setSongHead] = useState({})
-  const [currentId, setCurrentId] = useState('')
 
   useEffect(() => {
     getUserSongList(userId).then((res) => {
