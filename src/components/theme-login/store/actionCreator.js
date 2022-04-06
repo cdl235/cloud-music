@@ -1,7 +1,7 @@
 import { gotoPhoneLogin } from '@/service/login'
 import * as actionTypes from './actionTypes'
 import loginInfo from '@/config/token'
-import { getLoginInfo , setLoginInfo} from '@/utils/secret-key'
+import { getLoginInfo, setLoginInfo } from '@/utils/secret-key'
 import md5 from 'js-md5'
 import { message } from 'antd'
 // 更改登录框显示
@@ -44,7 +44,7 @@ export const getLoginProfileInfo = (username, password, tip) => {
       // console.log(res)
       if (res.code !== 200) {
         message.error('账号或密码错误')
-      }else {
+      } else {
         tip && message.success('登录成功')
         // console.log(res)
         // 登录成功
@@ -55,7 +55,9 @@ export const getLoginProfileInfo = (username, password, tip) => {
         dispatch(changeUserLoginState(true))
         dispatch(changeUserLoginToken(res.token))
         dispatch(changeUserLoginCookie(res.cookie))
+        localStorage.setItem('isLogin', true)
         console.log(res)
+        localStorage.setItem('userId', res.profile.userId)
         // 更改登录状态
         loginInfo.username = username
         loginInfo.password = password

@@ -17,7 +17,7 @@ import { DownOutlined, SearchOutlined } from '@ant-design/icons';
 import { HeaderLeft, HeaderRight, HeaderWrapper } from './style';
 import { clearLoginState } from '../../utils/secret-key';
 
-export default memo(function JMAppHeader(props) {
+export default memo(function JMAppHeader (props) {
   // props/state
   const [isRedirect, setIsRedirect] = useState(false);
   const [value, setValue] = useState('');
@@ -100,8 +100,8 @@ export default memo(function JMAppHeader(props) {
         // 保存value
         setValue(
           searchSongList[recordActive].name +
-            '-' +
-            searchSongList[recordActive].artists[0].name
+          '-' +
+          searchSongList[recordActive].artists[0].name
         );
       }
       dispatch(changeFocusStateAction(false));
@@ -213,7 +213,7 @@ export default memo(function JMAppHeader(props) {
         <HeaderLeft>
           <h1>
             <a href="#/" className="logo sprite_01">
-              网易云音乐
+              云音乐
             </a>
           </h1>
           <div className="header-group">

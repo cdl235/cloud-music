@@ -1,0 +1,10 @@
+.ant-modal-header {
+	background-color: #141312;
+	border-radius: 10px 10px 0 0;
+}
+.ant-modal-close-x {
+	color: #fff;
+}
+.ant-modal-content {
+	border-radius: 10px;
+}

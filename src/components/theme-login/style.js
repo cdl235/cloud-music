@@ -32,4 +32,5 @@ export const LoginRight = styled.div`
 export const PhoneLoginModal = styled.section`
   display: flex;
   justify-content: center;
+  color: #fff
 `

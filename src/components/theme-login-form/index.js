@@ -57,7 +57,7 @@ const ThemeLoginForm = (props) => {
       else message.warn(res.message)
     })
   }
-  const onRegisterFinishFailed = () => {}
+  const onRegisterFinishFailed = () => { }
 
   // handle function
   const handleSendCode = () => {
@@ -152,9 +152,9 @@ const ThemeLoginForm = (props) => {
           rules={[
             {
               pattern: mathchPhoneReg,
-              message: `请输入正确的手机号`,
+              message: `请输入正确的账号`,
             },
-            { required: true, message: '请输入你的手机号' },
+            { required: true, message: '请输入正确的账号' },
           ]}
         >
           <Input

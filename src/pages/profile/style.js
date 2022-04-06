@@ -78,7 +78,7 @@ export const ProfileWrapper = styled.main`
         }
       }
       .recommend {
-        margin: 15px 0;
+        margin: 7px 0;
       }
     }
   }

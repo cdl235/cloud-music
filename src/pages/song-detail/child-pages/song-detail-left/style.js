@@ -12,8 +12,8 @@ export const SongDetailLeftWrapper = styled.div`
 export const HeaderTitle = styled(ICons)`
   .conver-img {
     position: relative;
-    span {
-      position: absolute;
+    margin:20px;
+    span ,img{
       width: 208px;
       height: 208px;
       background-position: 0 -1285px;
@@ -22,7 +22,7 @@ export const HeaderTitle = styled(ICons)`
     }
   }
   .song-detail {
-    margin-left: 30px;
+    margin:20px;
     font-size: 14px;
     .detail-title-wrapper {
       display: flex;
@@ -43,6 +43,13 @@ export const HeaderTitle = styled(ICons)`
       line-height: 35px;
       .avatar-name {
         margin: 0 15px;
+      }
+      .avatar-pic {
+        width:40px;
+        height:40px;
+        img {
+          width:100%;
+        }
       }
     }
     .label-warpper {

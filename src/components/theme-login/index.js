@@ -3,15 +3,16 @@ import { Button, message, Modal } from 'antd'
 import Draggable from 'react-draggable'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import { changeIsVisible } from './store'
-import { PhoneOutlined } from '@ant-design/icons'
+import { PhoneOutlined, ThunderboltOutlined } from '@ant-design/icons'
 import LoginIcon from '@/components/theme-controls-icon/login/index'
 import { LoginLeft, LoginRight, LoginWrapper, PhoneLoginModal } from './style'
 import ThemeLoginForm from '../theme-login-form'
+import './index.css'
 
 /**
  * 登录页面(模态框)
  */
-function ThemeLogin() {
+function ThemeLogin () {
   // state/props
   const [disabled, setDisabled] = useState(true)
   const [loginState, setLoginState] = useState('default') // 默认状态显示
@@ -82,10 +83,10 @@ function ThemeLogin() {
           <Button
             type="primary"
             shape="round"
-            icon={<PhoneOutlined />}
+            icon={<ThunderboltOutlined />}
             onClick={() => handleLogin('phone')}
           >
-            手机号登录
+            账号登录
           </Button>
         </div>
       </LoginLeft>
@@ -129,11 +130,13 @@ function ThemeLogin() {
       <Modal
         centered
         footer={null}
+        style={{ borderRadius: '30px' }}
         title={
           <div
             style={{
               width: '100%',
               cursor: 'move',
+              color: '#fff'
             }}
             onMouseOver={() => {
               if (disabled) {
@@ -145,9 +148,9 @@ function ThemeLogin() {
             }}
             // fix eslintjsx-a11y/mouse-events-have-key-events
             // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/mouse-events-have-key-events.md
-            onFocus={() => {}}
-            onBlur={() => {}}
-            // end
+            onFocus={() => { }}
+            onBlur={() => { }}
+          // end
           >
             {loginState === 'register' ? '注册' : '登录'}
           </div>

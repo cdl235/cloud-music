@@ -17,10 +17,11 @@ const changeSingerListAction = (singerList) => ({
 export const getSearchSongListAction = (songName, limit, type = 1) => {
   return (dispatch) => {
     getSearchSongData(songName, limit, type).then((res) => {
+
       const songs = res && res.result.songs
       dispatch(changeSongListAction(songs))
     })
-  } 
+  }
 }
 
 // 搜索歌手列表network
