@@ -103,14 +103,14 @@ function ThemeLogin () {
             description="QQ登录"
           />
           <LoginIcon
-            onClick={() => message.warn('暂不做')}
-            position="-231px -670px"
-            description="微博登录"
-          />
-          <LoginIcon
             onClick={() => handleLogin('email')}
             position="-271px -670px"
             description="网易邮箱登录"
+          />
+          <LoginIcon
+            onClick={() => message.warn('暂不做')}
+            position="-231px -670px"
+            description="微博登录"
           />
         </div>
       </LoginRight>

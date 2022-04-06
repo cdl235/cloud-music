@@ -29,7 +29,8 @@ export const HeaderLeft = styled.div`
     // text-indent: -9999px;
     margin-right:40px;
     color:#fff;
-    font-size:20px
+    font-size:20px;
+    text-decoration: none;
   }
   img {
     width: 69px;
